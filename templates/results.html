@@ -1,0 +1,20 @@
+<!-- results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen Analisis Resultado</title>
+</head>
+<body>
+    <h1>Imagen Analisis Resultados</h1>
+    {% for result in results %}
+    <h2>Tags para Imagen:</h2>
+    <ul>
+        {% for tag, confidence in result %}
+        <li>{{ tag }} (Confidence: {{ confidence }})</li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</body>
+</html>
